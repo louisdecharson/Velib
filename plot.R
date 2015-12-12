@@ -30,7 +30,7 @@ df.velib_bikes <- read.csv("/Users/louisdecharson/Programmation/Python/Velib/dat
 
 
 myTitle<-paste("Available Velib in Paris - date :",toString(Sys.time()))
-map.paris <- qmap("paris", source="stamen", zoom=12, maptype="toner") 
+map.paris <- qmap("paris", source="stamen", zoom=12, messaging=FALSE, maptype="toner") 
 map.paris<-map.paris +
   geom_point(data=df.velib_bikes, aes(x=longitude, y=latitude, size=fields.available_bikes, color=fields.available_bikes), alpha=.9, na.rm=T) +
   scale_color_gradient(low="#99e699", high="#145214", name="Number of available \nbikes") +
