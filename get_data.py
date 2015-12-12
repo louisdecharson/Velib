@@ -12,8 +12,8 @@ import rpy2.robjects as robjects
 
 url = "http://opendata.paris.fr/api/records/1.0/search/?dataset=stations-velib-disponibilites-en-temps-reel&rows=1240&facet=banking&facet=bonus&facet=status&facet=contract_name"
 
-for i in range(1,1):
-    try:
+try:
+    for i in range(1,1):
         response = urllib.request.urlopen(url)
         data=str(response.read()).strip()
 
@@ -39,13 +39,12 @@ for i in range(1,1):
             r['source']("plot.R")
         except:
             raise
-    except:
-        e=sys.exc_info()[0]
-        write_to_page( "<p>Error: %s</p>" % e )
-        
-    finally:
-        print("done.")
-        # Attente 60 secondes
-        # time.sleep(60)
+except:
+    e=sys.exc_info()[0]
+    write_to_page( "<p>Error: %s</p>" %
+finally:
+    print("done.")
+    # Attente 60 secondes
+    # time.sleep(60)
 
 
