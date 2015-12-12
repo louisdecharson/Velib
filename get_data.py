@@ -14,7 +14,6 @@ url = "http://opendata.paris.fr/api/records/1.0/search/?dataset=stations-velib-d
 
 for i in range(1,1):
     try:
-
         response = urllib.request.urlopen(url)
         data=str(response.read()).strip()
 
@@ -35,11 +34,9 @@ for i in range(1,1):
         #Sauvegarde dans un .csv
         df.to_csv("/Users/louisdecharson/Programmation/Python/Velib/data/velib.csv")
         #Lancement du script R.
-        try:
-            r=robjects.r
-            r['source']("plot.R")
-        except:
-            raise
+        r=robjects.r
+        r['source']("plot.R")
+
     except:
         e=sys.exc_info()[0]
         write_to_page( "<p>Error: %s</p>" % e)
