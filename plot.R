@@ -6,7 +6,7 @@ library(ggmap)
 library(ggplot2)
 
 #Variables
-dir<-"/Users/louisdecharson/Programmation/Python/Velib/"
+dir<-"/Users/louisdecharson/Programmation/Python/Velib/plots/"
 
 #--------------
 # GET THE DATA
