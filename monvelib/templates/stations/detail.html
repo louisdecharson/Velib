@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h4>{{station.name[7:]}}</h4>
+<h6>{{station.address}}</h6>
+<iframe
+  width="450"
+  height="250"
+  frameborder="0" style="border:0"
+  src="{{myUrlMap}}">
+  </iframe>
+  
+<table class="table table-reflow">
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Bikes</th>
+      <th>Stands</th>
+      <th>Bonus</th>
+      <th>Last Update</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{station.velos[lastVelo].status}}</td>
+      <td>{{station.velos[lastVelo].bikes}}</td>
+      <td>{{station.velos[lastVelo].stands}}</td>
+      <td>{{station.bonus}}</td>
+      <td>{{station.velos[lastVelo].last_update}}</td>
+    </tr>
+  </tbody>
+</table>
+{% endblock %}

@@ -1,2 +1,3 @@
-**/plots/
-
+# Everything except monvelib
+/*
+!/monvelib

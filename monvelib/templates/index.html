@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class=container>
+  <center>
+    <h1>Mon Velib</h1>
+    <h2><i> - under {intense} development - </i><h2>
+    <img src="../static/img/jump.gif">
+    
+    <table class="table table-reflow">
+      <thead>
+        <tr>
+          <th>Opened Stations</th>
+          <th>Closed Stations</th>
+          <th>Bikes</th>
+          <th>Stands</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{generalStatus[0]}}</td>
+          <td>{{generalStatus[1]}}</td>
+          <td>{{generalStatus[2]}}</td>
+          <td>{{generalStatus[3]}}</td>
+        </tr>
+  </tbody>
+    </table>
+  </center>
+</div>
+   
+{% endblock %}

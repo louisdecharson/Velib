@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<form method="POST" action=".">
+  <button type="submit" class="btn btn-primary-outline" name="update">Update</button>
+</form>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Stands</th>
+      <th>Bikes</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for station in stations %}
+    <tr>
+      <td><a href="{{url_for('stations.detail', slug=station.slug)}}" >{{station.name}}</a></td>
+      <td>{{station.address}}</td>
+      <td>{{station.velos[0].stands}}</td>
+      <td>{{station.velos[0].bikes}}</td>
+      {% endfor %}
+    </tr>
+  </tbody>
+</table>
+{% endblock %}
+

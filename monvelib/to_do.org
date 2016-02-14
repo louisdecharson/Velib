@@ -1,0 +1,31 @@
+monvelib -*- mode: org -*-
+
+* Tasks - Shorterm
+  SCHEDULED: <2016-02-13 Sat>
+
+** DONE get slug for station right 
+   CLOSED: [2016-02-13 Sat 10:08]
+** DONE update views.py for station & template 'detail.htm'
+   CLOSED: [2016-02-13 Sat 10:08]
+** DONE fix the menu problem & update button
+   CLOSED: [2016-02-13 Sat 10:08]
+** TODO fix the map value 
+** TODO make velos ordered as proper time series
+
+
+
+* Tasks - Medium Term
+** TODO statistics for each station
+
+
+
+-----
+
+** TODO make uploading database and making maps background tasks
+
+* Basics command
+C-c C-t : done 
+C-c a t : enter the global todo list
+C-c C-s : org-schedule
+C-c a a : agenda
+
