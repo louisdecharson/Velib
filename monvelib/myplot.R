@@ -1,9 +1,15 @@
-## Installation of Packages
-library(ggmap)
-library(ggplot2)
-library(mongolite)
-library(tidyr)
-## Script
+## Installation of Packages ##
+##############################
+require(ggmap)
+require(ggplot2)
+require(mongolite)
+require(tidyr)
+
+
+
+## Script ##
+############
+
 # Connection to database
 stations<-mongo(collection = "station", db = "velib", url = "mongodb://localhost",
                 verbose = TRUE)
